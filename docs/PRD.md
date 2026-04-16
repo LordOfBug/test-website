@@ -1,36 +1,44 @@
 # Product Requirements Document (PRD) - Acme Innovative Solutions Website
 
-## Project Overview
-**Client:** Acme Innovative Solutions
-**Industry:** Tech Consultancy
-**Goal:** Create a professional, modern website that showcases consultancy services and expertise.
-**Target Audience:** Enterprise clients, SMEs looking for digital transformation, and tech partners.
+## 1. Project Overview
+The objective is to create a professional, modern website for **Acme Innovative Solutions**, a tech consultancy firm. The website should communicate expertise, reliability, and innovation to potential clients.
 
-## Core Features
-1.  **Homepage:**
-    *   **Hero Section:** High-impact value proposition with a professional "Tech" feel.
-    *   **Services Overview:** Grid or list of primary consultancy offerings.
-    *   **About Us:** Brief introduction to Acme's mission.
-    *   **Contact CTA:** Strong call-to-action for lead generation.
-2.  **Navigation:**
-    *   Sticky header with links to Services, About, and Contact.
-3.  **Responsive Design:**
-    *   Mobile-first approach, fully responsive across all device sizes.
+## 2. Brand Identity
+- **Company Name**: Acme Innovative Solutions
+- **Brand Vision**: To be a leading tech consultancy providing digital excellence and innovation.
+- **Colors**: 
+  - Primary: Blue (Hex code to be finalized in Design Specs, currently using `primary-blue`)
+  - Secondary: Silver/Gray
+- **Logo**: Text-based logo "ACME Solutions" (as currently implemented in Header). No specific image asset was found in workspace audit.
 
-## Visual Design (Look & Feel)
-*   **Color Palette:** Primary: Blue (Trust, Professionalism); Secondary: Silver/Metallic (Tech, Innovation); Background: White/Light Gray.
-*   **Typography:** Modern Sans-serif (e.g., Inter or Geist).
-*   **Style:** Clean, minimalist, high contrast, using professional imagery and icons.
+## 3. Target Audience
+- Businesses seeking digital transformation.
+- Tech startups needing consultancy.
+- Enterprises looking for innovative software solutions.
 
-## Technical Requirements
-*   **Framework:** Next.js (App Router)
-*   **Styling:** Tailwind CSS
-*   **Language:** TypeScript
-*   **Components:** Modular React components for Header, Hero, Services, Footer, and Contact.
-*   **Hosting/Deployment:** GitHub repository integration.
+## 4. Functional Requirements
+- **Hero Section**: Engaging introduction with a clear Call-to-Action (CTA).
+- **Services Section**: Showcase core consultancy offerings.
+- **Contact Form**: Lead generation form for potential clients.
+- **Responsive Design**: Optimized for mobile, tablet, and desktop.
+- **Navigation**: Sticky header with links to key sections (Home, Services, Contact).
+- **Footer**: Professional footer with copyright and basic info.
 
-## Timeline & Milestones
-1.  PRD Approval (Current)
-2.  Architecture & Design Specs
-3.  Scaffolding & Component Development
-4.  QA & Final Review
+## 5. Technical Requirements
+- **Framework**: Next.js (App Router)
+- **Styling**: Tailwind CSS
+- **Language**: TypeScript
+- **Deployment**: Ready for Vercel/similar platforms.
+
+## 6. Success Criteria
+- Clean, professional UI/UX.
+- Fully functional contact form (frontend validation).
+- 100% responsive layout.
+- Fast loading speeds and SEO friendly structure.
+
+## 7. Development Roadmap (Sequential Stages)
+1. **Architecture & Manifest**: Define folder structure and component hierarchy.
+2. **Design System & Branding**: Finalize color palette (Blue/Silver) and typography.
+3. **Codebase Initialization**: Setup Tailwind config and global styles.
+4. **Feature Implementation**: Build out components and pages.
+5. **End-to-End Validation**: QA testing for bugs and responsiveness.
