@@ -1,19 +1,39 @@
-const services = [
-  { title: "Cloud Strategy", desc: "Scalable infrastructure for the digital age." },
-  { title: "Custom Software", desc: "Tailored applications built with modern stacks." },
-  { title: "Tech Audits", desc: "Optimization and security for your existing systems." }
-];
-
 export default function Services() {
+  const services = [
+    {
+      title: 'Cloud Architecture',
+      description: 'Designing scalable and resilient cloud infrastructure for modern enterprises.',
+      icon: '☁️',
+    },
+    {
+      title: 'Digital Transformation',
+      description: 'Accelerating your business growth through strategic technology adoption.',
+      icon: '🚀',
+    },
+    {
+      title: 'Software Strategy',
+      description: 'Tailored roadmaps to optimize your software development lifecycle.',
+      icon: '💻',
+    },
+  ];
+
   return (
-    <section id="services" className="py-20 bg-white">
-      <div className="max-w-6xl mx-auto px-4 text-center">
-        <h2 className="text-3xl font-bold mb-12">Our Services</h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          {services.map((s, i) => (
-            <div key={i} className="p-8 border border-silver rounded-lg hover:shadow-lg transition">
-              <h3 className="text-xl font-bold mb-4 text-primary-blue">{s.title}</h3>
-              <p className="text-gray-600">{s.desc}</p>
+    <section id="services" className="py-24 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+            Our Expertise
+          </h2>
+          <p className="mt-4 text-xl text-gray-600">
+            Comprehensive technology solutions tailored to your business needs.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <div key={index} className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition">
+              <div className="text-4xl mb-4">{service.icon}</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
+              <p className="text-gray-600">{service.description}</p>
             </div>
           ))}
         </div>
