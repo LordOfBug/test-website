@@ -19,15 +19,15 @@ export default function Home() {
             <form className="grid grid-cols-1 gap-y-6 text-left" onSubmit={(e) => e.preventDefault()}>
               <div>
                 <label htmlFor="full-name" className="block text-sm font-medium text-gray-700">Full Name</label>
-                <input type="text" name="full-name" id="full-name" className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-primary-blue focus:border-primary-blue text-black" placeholder="John Doe" />
+                <input type="text" name="full-name" id="full-name" className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-primary-blue focus:border-primary-blue text-black" placeholder="John Doe" required />
               </div>
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email Address</label>
-                <input type="email" name="email" id="email" className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-primary-blue focus:border-primary-blue text-black" placeholder="john@example.com" />
+                <input type="email" name="email" id="email" className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-primary-blue focus:border-primary-blue text-black" placeholder="john@example.com" required />
               </div>
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
-                <textarea id="message" name="message" rows={4} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-primary-blue focus:border-primary-blue text-black" placeholder="How can we help?"></textarea>
+                <textarea id="message" name="message" rows={4} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-primary-blue focus:border-primary-blue text-black" placeholder="How can we help?" required></textarea>
               </div>
               <button type="submit" className="w-full bg-primary-blue text-white font-bold py-3 px-6 rounded-md hover:opacity-90 transition">
                 Send Message
