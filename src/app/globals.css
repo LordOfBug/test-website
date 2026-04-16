@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --primary-blue: #0047AB;
+  --silver: #C0C0C0;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: white;
+}
+
+.bg-primary-blue {
+  background-color: var(--primary-blue);
+}
+
+.text-primary-blue {
+  color: var(--primary-blue);
+}
+
+.bg-silver {
+  background-color: var(--silver);
+}
