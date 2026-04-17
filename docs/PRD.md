@@ -1,41 +1,27 @@
-# Product Requirements Document (PRD) - Acme Innovative Solutions Website
+# Project Requirements Document (PRD) - Professional Website
 
-## Project Overview
-**Client:** Acme Innovative Solutions
-**Industry:** Tech Consultancy
-**Goal:** Create a professional, modern website that showcases consultancy services and expertise.
-**Target Audience:** Enterprise clients, SMEs looking for digital transformation, and tech partners.
+## 1. Project Overview
+The goal of this project is to create a professional, modern website for **ACME Solutions**. The website should serve as a digital storefront, highlighting the company's services and providing a way for potential clients to get in touch.
 
-## Branding Identity
-**Company Name:** Acme Innovative Solutions
-**Primary Colors:** Blue (Trust, Professionalism), Silver (Tech, Innovation)
-**Logo:** TBD (Placeholder using professional typography/SVG)
+## 2. Branding & Identity
+- **Company Name**: ACME Solutions
+- **Primary Color**: `primary-blue` (as defined in Tailwind configuration/globals)
+- **Typography**: Professional, clean sans-serif (Geist)
+- **Tone**: Corporate, Innovative, Trustworthy
 
-## Core Features
-1.  **Homepage:**
-    *   **Hero Section:** High-impact value proposition: "Leading Digital Transformation for Modern Enterprises".
-    *   **Services Overview:** Strategic IT Consulting, Software Development, Cloud Transformation.
-    *   **About Us:** Mission to innovate and deliver excellence in tech consultancy.
-    *   **Contact CTA:** Integrated contact form or direct CTA to schedule a consultation.
-2.  **Navigation:**
-    *   Sticky header with links to Home, Services, About, and Contact.
-3.  **Responsive Design:**
-    *   Fully optimized for Mobile, Tablet, and Desktop.
+## 3. Features & Functional Requirements
+- **Responsive Header**: Navigation links (Home, Services, Contact) with a mobile-friendly menu.
+- **Hero Section**: Impactful value proposition with a clear call-to-action.
+- **Services Section**: Grid or list highlighting key business offerings.
+- **Contact Form**: Functional lead generation form with validation.
+- **Footer**: Company branding and links.
 
-## Visual Design (Look & Feel)
-*   **Color Palette:** Primary: Blue; Secondary: Silver/Metallic; Background: White/Light Gray.
-*   **Typography:** Modern Sans-serif (Geist/Inter).
-*   **Style:** Minimalist, high contrast, professional tech aesthetic.
+## 4. Technical Stack
+- **Framework**: Next.js (App Router)
+- **Styling**: Tailwind CSS
+- **Language**: TypeScript
 
-## Technical Stack
-*   **Framework:** Next.js 15 (App Router)
-*   **Styling:** Tailwind CSS
-*   **Language:** TypeScript
-*   **Infrastructure:** Git-based workflow.
-
-## Milestones
-1.  **Architecture:** System design and routing manifest.
-2.  **Design Specs:** UI/UX design system and component definitions.
-3.  **Scaffold:** Repository setup and base layouts.
-4.  **Build:** Feature implementation.
-5.  **QA:** Testing and validation.
+## 5. Success Criteria
+- Fully responsive layout across desktop, tablet, and mobile.
+- Professional aesthetic aligned with the ACME Solutions brand.
+- Working contact form interaction.
