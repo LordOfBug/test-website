@@ -6,31 +6,36 @@
 **Goal:** Create a professional, modern website that showcases consultancy services and expertise.
 **Target Audience:** Enterprise clients, SMEs looking for digital transformation, and tech partners.
 
+## Branding Identity
+**Company Name:** Acme Innovative Solutions
+**Primary Colors:** Blue (Trust, Professionalism), Silver (Tech, Innovation)
+**Logo:** TBD (Placeholder using professional typography/SVG)
+
 ## Core Features
 1.  **Homepage:**
-    *   **Hero Section:** High-impact value proposition with a professional "Tech" feel.
-    *   **Services Overview:** Grid or list of primary consultancy offerings.
-    *   **About Us:** Brief introduction to Acme's mission.
-    *   **Contact CTA:** Strong call-to-action for lead generation.
+    *   **Hero Section:** High-impact value proposition: "Leading Digital Transformation for Modern Enterprises".
+    *   **Services Overview:** Strategic IT Consulting, Software Development, Cloud Transformation.
+    *   **About Us:** Mission to innovate and deliver excellence in tech consultancy.
+    *   **Contact CTA:** Integrated contact form or direct CTA to schedule a consultation.
 2.  **Navigation:**
-    *   Sticky header with links to Services, About, and Contact.
+    *   Sticky header with links to Home, Services, About, and Contact.
 3.  **Responsive Design:**
-    *   Mobile-first approach, fully responsive across all device sizes.
+    *   Fully optimized for Mobile, Tablet, and Desktop.
 
 ## Visual Design (Look & Feel)
-*   **Color Palette:** Primary: Blue (Trust, Professionalism); Secondary: Silver/Metallic (Tech, Innovation); Background: White/Light Gray.
-*   **Typography:** Modern Sans-serif (e.g., Inter or Geist).
-*   **Style:** Clean, minimalist, high contrast, using professional imagery and icons.
+*   **Color Palette:** Primary: Blue; Secondary: Silver/Metallic; Background: White/Light Gray.
+*   **Typography:** Modern Sans-serif (Geist/Inter).
+*   **Style:** Minimalist, high contrast, professional tech aesthetic.
 
-## Technical Requirements
-*   **Framework:** Next.js (App Router)
+## Technical Stack
+*   **Framework:** Next.js 15 (App Router)
 *   **Styling:** Tailwind CSS
 *   **Language:** TypeScript
-*   **Components:** Modular React components for Header, Hero, Services, Footer, and Contact.
-*   **Hosting/Deployment:** GitHub repository integration.
+*   **Infrastructure:** Git-based workflow.
 
-## Timeline & Milestones
-1.  PRD Approval (Current)
-2.  Architecture & Design Specs
-3.  Scaffolding & Component Development
-4.  QA & Final Review
+## Milestones
+1.  **Architecture:** System design and routing manifest.
+2.  **Design Specs:** UI/UX design system and component definitions.
+3.  **Scaffold:** Repository setup and base layouts.
+4.  **Build:** Feature implementation.
+5.  **QA:** Testing and validation.
