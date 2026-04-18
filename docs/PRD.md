@@ -1,27 +1,26 @@
-# Project Requirements Document (PRD) - Professional Website
+# Product Requirements Document (PRD): Burros.AI Platform
 
-## 1. Project Overview
-The goal of this project is to create a professional, modern website for **ACME Solutions**. The website should serve as a digital storefront, highlighting the company's services and providing a way for potential clients to get in touch.
+## 1. Introduction
+Burros.AI is a modern agentic flow orchestration platform designed to handle complex tasks through a collaborative multi-agent architecture.
 
-## 2. Branding & Identity
-- **Company Name**: ACME Solutions
-- **Primary Color**: `primary-blue` (as defined in Tailwind configuration/globals)
-- **Typography**: Professional, clean sans-serif (Geist)
-- **Tone**: Corporate, Innovative, Trustworthy
+## 2. Core Concepts
+- **Burros**: Specialist AI agents capable of performing specific roles (Architect, Designer, Developer, QA, etc.).
+- **Corrals**: Groups or environments where multiple Burros collaborate on a shared project or mission.
+- **Blueprints/Playbooks**: Task templates that define the workflow, roles, and instructions for the Burros within a Corral.
 
-## 3. Features & Functional Requirements
-- **Responsive Header**: Navigation links (Home, Services, Contact) with a mobile-friendly menu.
-- **Hero Section**: Impactful value proposition with a clear call-to-action.
-- **Services Section**: Grid or list highlighting key business offerings.
-- **Contact Form**: Functional lead generation form with validation.
-- **Footer**: Company branding and links.
+## 3. Project Objective
+The current mission is to build/update the Burros.AI website to reflect these core concepts, utilizing the provided branding (logo) and platform description.
 
-## 4. Technical Stack
-- **Framework**: Next.js (App Router)
-- **Styling**: Tailwind CSS
-- **Language**: TypeScript
+## 4. Key Features (Functional Requirements)
+- **Home Page**: Clearly explain the Burros, Corrals, and Blueprints concept.
+- **Branding**: Integrate the `burros.png` logo consistently across the site.
+- **Responsive Design**: Ensure the site is accessible and functional across mobile, tablet, and desktop devices.
+- **Technical Stack**: (To be determined by Architect, likely modern web stack like React/Next.js).
 
-## 5. Success Criteria
-- Fully responsive layout across desktop, tablet, and mobile.
-- Professional aesthetic aligned with the ACME Solutions brand.
-- Working contact form interaction.
+## 5. Visual Guidelines
+- Use the provided `burros.png` for all logo placements.
+- Professional, modern, and "tech-forward" aesthetic.
+
+## 6. Target Codebase
+- Repository: `git@github.com:LordOfBug/test-website.git`
+- Feature Branch: `feature/burro-68b90ea1f252471898a82c87d37027b4`
