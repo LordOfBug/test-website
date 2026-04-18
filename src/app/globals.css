@@ -3,26 +3,23 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-  --primary-blue: #0047AB;
-  --silver: #C0C0C0;
+  --background: #FAFAFA;
+  --foreground: #263238;
+  --primary: #D4A017;
+  --secondary: #5D4037;
+  --surface: #FFFFFF;
+  --accent: #1976D2;
+  --border: #EEEEEE;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: white;
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
-.bg-primary-blue {
-  background-color: var(--primary-blue);
-}
+.brand-gold { color: var(--primary); }
+.bg-brand-gold { background-color: var(--primary); }
+.brand-brown { color: var(--secondary); }
+.bg-brand-brown { background-color: var(--secondary); }
 
-.text-primary-blue {
-  color: var(--primary-blue);
-}
-
-.bg-silver {
-  background-color: var(--silver);
-}
