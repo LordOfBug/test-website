@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Burros.AI | Modern Agentic Flow Orchestration",
-  description: "Coordinate specialist agents in corrals to execute complex blueprints.",
+  description: "Coordinate specialist agents (Burros) in Corrals to execute complex task Blueprints with the world's most advanced agentic orchestration platform.",
 };
 
 export default function RootLayout({
@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="dark scroll-smooth">
       <body className={`${inter.className} bg-slate-950 text-slate-50 antialiased`}>
         <div className="relative min-h-screen flex flex-col">
           <Header />
