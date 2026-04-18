@@ -1,41 +1,39 @@
-import { Service } from "@/types";
-
-export default function Services() {
-  const services: Service[] = [
+export default function Platform() {
+  const features = [
     {
-      title: 'Cloud Architecture',
-      description: 'Designing scalable and resilient cloud infrastructure for modern enterprises.',
-      icon: '☁️',
+      title: 'Corrals',
+      description: 'Secure, high-concurrency environments where specialist agents collaborate seamlessly on complex tasks.',
+      icon: '🏘️',
     },
     {
-      title: 'Digital Transformation',
-      description: 'Accelerating your business growth through strategic technology adoption.',
-      icon: '🚀',
+      title: 'Burros',
+      description: 'Autonomous specialist agents engineered for specific roles, from code synthesis to architectural design.',
+      icon: '🫏',
     },
     {
-      title: 'Software Strategy',
-      description: 'Tailored roadmaps to optimize your software development lifecycle.',
-      icon: '💻',
+      title: 'Blueprints',
+      description: 'Deterministic playbooks that define agentic workflows, ensuring reliable and repeatable execution.',
+      icon: '📜',
     },
   ];
 
   return (
-    <section id="services" className="py-24 bg-gray-50">
+    <section id="features" className="py-24 bg-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-            Our Expertise
+          <h2 className="text-3xl font-extrabold text-white sm:text-4xl tracking-tight">
+            The Agentic Operating System
           </h2>
-          <p className="mt-4 text-xl text-gray-600">
-            Comprehensive technology solutions tailored to your business needs.
+          <p className="mt-4 text-xl text-slate-400">
+            A unified stack for orchestrating autonomous agent swarms.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div key={index} className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition">
-              <div className="text-4xl mb-4">{service.icon}</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
-              <p className="text-gray-600">{service.description}</p>
+          {features.map((feature, index) => (
+            <div key={index} className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700 hover:border-indigo-500/50 transition duration-300">
+              <div className="text-4xl mb-4">{feature.icon}</div>
+              <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
+              <p className="text-slate-400 leading-relaxed">{feature.description}</p>
             </div>
           ))}
         </div>
