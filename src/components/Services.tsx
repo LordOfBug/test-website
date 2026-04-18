@@ -1,5 +1,7 @@
+import { Service } from "@/types";
+
 export default function Services() {
-  const services = [
+  const services: Service[] = [
     {
       title: 'Cloud Architecture',
       description: 'Designing scalable and resilient cloud infrastructure for modern enterprises.',
