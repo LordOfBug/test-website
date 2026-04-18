@@ -1,32 +1,39 @@
-export default function Footer() {
+import { Logo } from './branding/Logo';
+
+export const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <h3 className="text-xl font-bold mb-4">Acme Innovative Solutions</h3>
-            <p className="text-gray-400">
-              Leading the way in digital transformation and cloud strategy.
+    <footer className="border-t border-slate-800 bg-slate-950">
+      <div className="container mx-auto px-4 py-12">
+        <div className="flex flex-col md:flex-row justify-between items-start gap-8">
+          <div className="max-w-sm">
+            <Logo className="mb-4" />
+            <p className="text-slate-400 text-sm leading-relaxed">
+              The modern agentic flow orchestration platform. Coordinate specialized agents to execute complex tasks with precision.
             </p>
           </div>
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-white">About Us</a></li>
-              <li><a href="#services" className="hover:text-white">Services</a></li>
-              <li><a href="#contact" className="hover:text-white">Contact</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
-            <p className="text-gray-400">Email: info@acme-solutions.com</p>
-            <p className="text-gray-400">Phone: +1 (555) 123-4567</p>
+          <div className="grid grid-cols-2 gap-12">
+            <div>
+              <h4 className="font-semibold text-white mb-4">Platform</h4>
+              <ul className="space-y-2 text-sm text-slate-400">
+                <li><a href="#" className="hover:text-indigo-400">Corrals</a></li>
+                <li><a href="#" className="hover:text-indigo-400">Burros</a></li>
+                <li><a href="#" className="hover:text-indigo-400">Blueprints</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold text-white mb-4">Company</h4>
+              <ul className="space-y-2 text-sm text-slate-400">
+                <li><a href="#" className="hover:text-indigo-400">About</a></li>
+                <li><a href="#" className="hover:text-indigo-400">Blog</a></li>
+                <li><a href="#" className="hover:text-indigo-400">Contact</a></li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Acme Innovative Solutions. All rights reserved.</p>
+        <div className="mt-12 pt-8 border-t border-slate-900 text-center text-slate-500 text-xs">
+          © {new Date().getFullYear()} Burros.AI. All rights reserved.
         </div>
       </div>
     </footer>
   );
-}
+};
