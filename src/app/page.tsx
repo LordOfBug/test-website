@@ -9,10 +9,42 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <Header />
+<<<<<<< HEAD
       <Hero />
       <FeatureGrid />
       <ProcessFlow />
       <ContactSection />
+=======
+      <main className="flex-grow">
+        <Hero />
+        <Services />
+        <section id="contact" className="py-24 bg-white">
+          <div className="max-w-3xl mx-auto px-4 text-center">
+            <h2 className="text-3xl font-extrabold text-gray-900 mb-8">Ready to Innovate?</h2>
+            <p className="text-xl text-gray-600 mb-10">
+              Get in touch with our experts today and start your journey towards digital excellence.
+            </p>
+            <form className="grid grid-cols-1 gap-y-6 text-left" onSubmit={(e) => e.preventDefault()}>
+              <div>
+                <label htmlFor="full-name" className="block text-sm font-medium text-gray-700">Full Name</label>
+                <input type="text" name="full-name" id="full-name" className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-primary-blue focus:border-primary-blue text-black" placeholder="John Doe" required />
+              </div>
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email Address</label>
+                <input type="email" name="email" id="email" className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-primary-blue focus:border-primary-blue text-black" placeholder="john@example.com" required />
+              </div>
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
+                <textarea id="message" name="message" rows={4} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-primary-blue focus:border-primary-blue text-black" placeholder="How can we help?" required></textarea>
+              </div>
+              <button type="submit" className="w-full bg-primary-blue text-white font-bold py-3 px-6 rounded-md hover:opacity-90 transition">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </section>
+      </main>
+>>>>>>> e0969198a85381d312ff0dbddc10d53d47dc6b44
       <Footer />
     </main>
   );
