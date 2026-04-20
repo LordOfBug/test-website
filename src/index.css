@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand Colors */
+  --color-primary: #0047AB;
+  --color-primary-hover: #003380;
+  --color-secondary: #C0C0C0;
+  --color-accent: #F59E0B; /* HITL Warning/Action */
+  
+  /* Semantic Colors */
+  --color-bg-dark: #0a0a0a;
+  --color-surface: rgba(255, 255, 255, 0.03);
+  --color-border-muted: rgba(192, 192, 192, 0.2);
+
+  /* Spacing & Radii */
+  --radius-brand: 6px;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --card: #f9f9f9;
+  --card-foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--color-bg-dark);
+    --foreground: #ededed;
+    --card: var(--color-surface);
+    --card-foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Design System Utilities */
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-primary text-white font-semibold rounded-[--radius-brand] transition-colors hover:bg-primary-hover;
+  }
+  
+  .btn-secondary {
+    @apply px-6 py-3 border border-secondary/30 text-foreground font-semibold rounded-[--radius-brand] transition-all hover:bg-secondary/10;
+  }
+
+  .card-glass {
+    @apply bg-card border border-[--color-border-muted] rounded-xl backdrop-blur-sm p-6;
+  }
+
+  .code-block {
+    @apply font-mono text-sm bg-black/50 border border-white/10 rounded-lg p-4 overflow-x-auto;
+  }
+
+  /* Visual Hierarchy Helpers */
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20;
+  }
+
+  .heading-xl {
+    @apply text-4xl md:text-6xl font-bold tracking-tight mb-6;
+  }
+
+  .subheading {
+    @apply text-xl text-muted-foreground max-w-2xl mx-auto mb-10;
+  }
+}

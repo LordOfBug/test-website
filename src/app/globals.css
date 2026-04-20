@@ -3,18 +3,29 @@
 @theme {
   --color-primary: #0047AB;
   --color-secondary: #C0C0C0;
+  --color-background: #0a0a0a;
+  --color-accent: #F59E0B;
+  --color-surface: rgba(255, 255, 255, 0.05);
+
+  --font-sans: Inter, Geist, ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Fira Code", "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0a0a;
+  --foreground: #ededed;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.btn-primary {
+  @apply bg-primary text-white px-6 py-2 rounded-sm font-bold transition-colors hover:bg-primary/90;
+}
+
+.btn-secondary {
+  @apply border border-secondary text-secondary px-6 py-2 rounded-sm font-bold transition-colors hover:bg-white/5;
+}
+
+.card-glass {
+  @apply bg-surface border border-secondary/20 rounded-sm p-6 transition-all hover:border-primary/40;
 }
 
 body {

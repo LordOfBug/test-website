@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Burros.AI - Intelligent Agent Orchestration",
-  description: "Orchestrate your AI workforce with Burros, Corrals, and Blueprints.",
+  title: "Burros.AI | Production-Grade AI Agent Orchestration",
+  description: "Orchestrate your AI agent fleet with Corral (Control Plane) and Burro Runner (Edge Execution).",
 };
 
 export default function RootLayout({
@@ -12,8 +11,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="antialiased">
+    <html lang="en" className="dark">
+      <body className="antialiased bg-background text-foreground">
         {children}
       </body>
     </html>
