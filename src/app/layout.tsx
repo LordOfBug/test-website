@@ -1,19 +1,32 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
 
 export const metadata: Metadata = {
-  title: "Burros.AI | Production-Grade AI Agent Orchestration",
-  description: "Orchestrate your AI agent fleet with Corral (Control Plane) and Burro Runner (Edge Execution).",
+  title: "Burros.AI | Agentic Flow Orchestration",
+  description: "Orchestrate complex agentic flows using Corrals of specialist Burros and automated Playbooks.",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en" className="dark">
-      <body className="antialiased bg-background text-foreground">
-        {children}
+    <html lang="en" className={`${inter.variable} scroll-smooth`}>
+      <body className="font-sans">
+        <Header />
+        <main className="min-h-screen">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );
