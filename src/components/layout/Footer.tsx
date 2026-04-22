@@ -8,11 +8,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="col-span-1 md:col-span-1">
             <div className="flex items-center gap-2 mb-6 opacity-80">
-              <div className="relative w-6 h-6">
+              <div className="relative w-6 h-6 shrink-0 flex items-center justify-center">
                 <Image 
                   src="/images/burros.png" 
                   alt="Burros.AI Logo" 
-                  fill
+                  width={24}
+                  height={24}
                   className="object-contain grayscale"
                 />
               </div>
