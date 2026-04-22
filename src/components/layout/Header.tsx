@@ -10,10 +10,10 @@ export default function Header() {
             <Image 
               src="/images/burros.png" 
               alt="Burros.AI Logo" 
-              fill 
+              width={32}
+              height={32}
               className="object-contain"
               priority
-              unoptimized
             />
           </div>
           <span className="text-xl font-bold tracking-tight text-white">

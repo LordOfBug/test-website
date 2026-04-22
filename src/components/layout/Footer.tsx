@@ -12,9 +12,9 @@ export default function Footer() {
                 <Image 
                   src="/images/burros.png" 
                   alt="Burros.AI Logo" 
-                  fill 
+                  width={24}
+                  height={24}
                   className="object-contain grayscale"
-                  unoptimized
                 />
               </div>
               <span className="text-lg font-bold tracking-tight text-white">
