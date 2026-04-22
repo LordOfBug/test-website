@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 :root {
   --background: #ffffff;
   --foreground: #333333;
@@ -17,6 +19,7 @@
   --color-primary: var(--primary);
   --color-accent: var(--accent);
   --color-surface: var(--surface);
+  --color-border: var(--border);
   
   --radius-sm: var(--radius);
   
@@ -35,7 +38,7 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border;
   }
   body {
     @apply bg-background text-foreground font-sans antialiased;
@@ -48,10 +51,10 @@
   }
   
   .btn-primary {
-    @apply inline-flex items-center justify-center rounded-sm bg-accent px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-accent/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50;
+    @apply inline-flex items-center justify-center rounded-sm bg-accent px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-accent/90 disabled:pointer-events-none disabled:opacity-50;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center rounded-sm border border-primary bg-transparent px-6 py-3 text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-white focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50;
+    @apply inline-flex items-center justify-center rounded-sm border border-primary bg-transparent px-6 py-3 text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-white disabled:pointer-events-none disabled:opacity-50;
   }
 }
