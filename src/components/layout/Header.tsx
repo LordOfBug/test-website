@@ -6,12 +6,11 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-secondary/10 px-8 py-4">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <div className="relative w-8 h-8 overflow-hidden">
+          <div className="relative w-8 h-8">
             <Image 
               src="/images/burros.png" 
               alt="Burros.AI Logo" 
-              width={32}
-              height={32}
+              fill
               className="object-contain"
               priority
             />
