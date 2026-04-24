@@ -36,7 +36,7 @@ export default function ContactSection() {
               <div className="h-full flex flex-col items-center justify-center text-center">
                 <div className="text-5xl mb-4">✅</div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Message Received</h3>
-                <p className="text-gray-600">We'll get back to you shortly about your corral.</p>
+                <p className="text-gray-600">We&apos;ll get back to you shortly about your corral.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">

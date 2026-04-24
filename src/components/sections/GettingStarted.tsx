@@ -75,7 +75,7 @@ export default function GettingStarted() {
                 {step.input && (
                   <div className="bg-surface border border-secondary/20 p-4 rounded-sm flex items-center gap-4 text-secondary italic">
                     <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-                    "{step.input}"
+                    &quot;{step.input}&quot;
                   </div>
                 )}
               </div>

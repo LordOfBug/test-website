@@ -1,4 +1,4 @@
-import { Shield, Zap, UserCheck, Cpu, Box, Cloud, Lock, Terminal } from 'lucide-react';
+import { UserCheck, Cpu, Box, Lock, Terminal } from 'lucide-react';
 
 const CAPABILITIES = [
   {
@@ -33,7 +33,7 @@ const CAPABILITIES = [
   }
 ];
 
-function MessageSquareIcon(props: any) {
+function MessageSquareIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
