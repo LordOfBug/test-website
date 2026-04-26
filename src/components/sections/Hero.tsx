@@ -22,17 +22,10 @@ export default function Hero() {
         </p>
         
         <div className="flex flex-col gap-4 sm:flex-row mt-4">
-<<<<<<< Updated upstream
           <a href="#contact" className="btn-primary text-lg px-8 py-4">
             Launch a Corral
           </a>
           <a href="#how-it-works" className="btn-secondary text-lg px-8 py-4">
-=======
-          <a href="#contact" className="btn-primary">
-            Launch a Corral
-          </a>
-          <a href="#how-it-works" className="btn-outline">
->>>>>>> Stashed changes
             View Playbooks
           </a>
         </div>

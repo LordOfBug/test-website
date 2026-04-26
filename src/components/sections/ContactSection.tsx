@@ -35,13 +35,8 @@ export default function ContactSection() {
             {submitted ? (
               <div className="h-full flex flex-col items-center justify-center text-center">
                 <div className="text-5xl mb-4">✅</div>
-<<<<<<< Updated upstream
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Message Received</h3>
                 <p className="text-gray-600">We'll get back to you shortly about your corral.</p>
-=======
-                <h3 className="text-2xl font-bold text-white mb-2 uppercase">Message Received</h3>
-                <p className="text-muted-foreground text-sm">We&apos;ll get back to you shortly about your mission.</p>
->>>>>>> Stashed changes
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">

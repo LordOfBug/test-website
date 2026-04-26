@@ -29,7 +29,6 @@ const RE_ACT_STEPS = [
 
 export default function HowItWorks() {
   return (
-<<<<<<< Updated upstream
     <section id="how-it-works" className="py-24 bg-surface/30">
       <div className="max-w-7xl mx-auto px-8">
         <div className="text-center mb-20">
@@ -49,37 +48,6 @@ export default function HowItWorks() {
               <h3 className="text-2xl font-bold text-primary">Burros</h3>
             </div>
             <p className="text-foreground/70 mb-8 leading-relaxed">
-=======
-    <section id="how-it-works" className="py-24 bg-background">
-      <div className="max-w-7xl mx-auto px-8">
-        <div className="text-center mb-20">
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 uppercase tracking-tight">The Ecosystem</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg md:text-xl">
-            Burros.AI orchestrates agentic flows using specialist agents and secure environments.
-          </p>
-        </div>
-
-        {/* Concept Visualization using Corral and Burro components */}
-        <div className="mb-32">
-          <Corral title="Engineering Operations" className="">
-            <Burro name="Architect" role="System Design & Planning" status="idle" />
-            <Burro name="Coder" role="TypeScript & Python Specialist" status="active" />
-            <Burro name="Auditor" role="Security & Compliance" status="idle" />
-            <Burro name="Ops" role="Deployment & Monitoring" status="idle" />
-            <Burro name="Doc" role="Technical Documentation" status="idle" />
-            <Burro name="Tester" role="QA & Integration" status="idle" />
-          </Corral>
-        </div>
-
-        {/* Detail Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-32">
-          <div className="border border-border bg-card p-8 transition-all hover:border-primary">
-            <div className="flex items-center gap-3 mb-6">
-              <Cpu className="text-primary" size={28} />
-              <h3 className="text-2xl font-bold text-white">Burros</h3>
-            </div>
-            <p className="text-muted-foreground mb-8 leading-relaxed text-sm">
->>>>>>> Stashed changes
               Specialist agents designed for specific tasks. From code generation to market analysis, Burros are the workhorses of your orchestration.
             </p>
             <ul className="space-y-3">
@@ -92,7 +60,6 @@ export default function HowItWorks() {
             </ul>
           </div>
 
-<<<<<<< Updated upstream
           <div className="card-glass p-8 relative overflow-hidden group">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 bg-accent/10 rounded-sm">
@@ -101,14 +68,6 @@ export default function HowItWorks() {
               <h3 className="text-2xl font-bold text-primary">Corrals</h3>
             </div>
             <p className="text-foreground/70 mb-8 leading-relaxed">
-=======
-          <div className="border border-border bg-card p-8 transition-all hover:border-primary">
-            <div className="flex items-center gap-3 mb-6">
-              <Shield className="text-accent" size={28} />
-              <h3 className="text-2xl font-bold text-white">Corrals</h3>
-            </div>
-            <p className="text-muted-foreground mb-8 leading-relaxed text-sm">
->>>>>>> Stashed changes
               Secure, collaborative environments where Burros execute flows. Corrals ensure that your data and tools remain under your control.
             </p>
             <ul className="space-y-3">
@@ -121,7 +80,6 @@ export default function HowItWorks() {
             </ul>
           </div>
 
-<<<<<<< Updated upstream
           <div className="card-glass p-8 relative overflow-hidden group">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 bg-accent/10 rounded-sm">
@@ -130,14 +88,6 @@ export default function HowItWorks() {
               <h3 className="text-2xl font-bold text-primary">Playbooks</h3>
             </div>
             <p className="text-foreground/70 mb-8 leading-relaxed">
-=======
-          <div className="border border-border bg-card p-8 transition-all hover:border-primary">
-            <div className="flex items-center gap-3 mb-6">
-              <Zap className="text-primary" size={28} />
-              <h3 className="text-2xl font-bold text-white">Playbooks</h3>
-            </div>
-            <p className="text-muted-foreground mb-8 leading-relaxed text-sm">
->>>>>>> Stashed changes
               The blueprints that guide agentic orchestration. Playbooks define the sequence, tools, and logic required to solve complex problems.
             </p>
             <ul className="space-y-3">
@@ -190,13 +140,8 @@ export default function HowItWorks() {
         {/* ReAct Loop Visualization */}
         <div className="relative">
           <div className="text-center mb-16">
-<<<<<<< Updated upstream
             <span className="text-accent font-bold text-sm uppercase tracking-widest mb-4 block">The Reasoning Loop</span>
             <h3 className="text-3xl font-bold text-primary">The ReAct Process</h3>
-=======
-            <span className="text-accent font-bold text-sm uppercase tracking-widest mb-4 block font-mono">The Reasoning Loop</span>
-            <h3 className="text-3xl font-bold text-white uppercase">The ReAct Process</h3>
->>>>>>> Stashed changes
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
@@ -204,7 +149,6 @@ export default function HowItWorks() {
             <div className="hidden lg:block absolute top-12 left-0 right-0 h-px bg-border -z-10" />
             
             {RE_ACT_STEPS.map((step, idx) => (
-<<<<<<< Updated upstream
               <div key={idx} className="flex flex-col items-center">
                 <div className="w-24 h-24 rounded-sm bg-white border border-border flex items-center justify-center mb-6 relative hover:border-accent transition-colors">
                   <step.icon className="text-accent" size={32} />
@@ -218,19 +162,6 @@ export default function HowItWorks() {
                 </p>
                 <div className="w-full bg-primary rounded-sm p-3 border border-primary">
                   <code className="text-[10px] font-mono text-white/90 leading-tight block">
-=======
-              <div key={idx} className="flex flex-col border border-border bg-card p-6 transition-all hover:border-accent">
-                <div className="flex items-center justify-between mb-4">
-                  <step.icon className="text-primary" size={24} />
-                  <span className="text-xs font-mono text-muted-foreground">0{idx + 1}</span>
-                </div>
-                <h4 className="text-white font-bold mb-3 uppercase tracking-tighter">{step.title}</h4>
-                <p className="text-muted-foreground text-xs mb-6 leading-relaxed">
-                  {step.description}
-                </p>
-                <div className="mt-auto bg-background p-3 border border-border">
-                  <code className="text-[10px] font-mono text-accent leading-tight block">
->>>>>>> Stashed changes
                     {step.code}
                   </code>
                 </div>

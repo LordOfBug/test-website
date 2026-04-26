@@ -73,15 +73,9 @@ export default function GettingStarted() {
                 )}
 
                 {step.input && (
-<<<<<<< Updated upstream
                   <div className="bg-surface border border-secondary/20 p-4 rounded-sm flex items-center gap-4 text-secondary italic">
                     <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
                     "{step.input}"
-=======
-                  <div className="bg-muted border border-border p-4 flex items-center gap-4 text-muted-foreground italic text-sm">
-                    <div className="w-2 h-2 bg-primary animate-pulse" />
-                    &quot;{step.input}&quot;
->>>>>>> Stashed changes
                   </div>
                 )}
               </div>
