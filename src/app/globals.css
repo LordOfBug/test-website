@@ -1,19 +1,24 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #333333;
-  --primary: #333333;
+  --background: #1A1C1E;
+  --foreground: #F8FAFC;
+  --primary: #0066FF;
   --primary-foreground: #ffffff;
-  --accent: #2563eb;
+  --accent: #0066FF;
   --accent-foreground: #ffffff;
-  --surface: #f9fafb;
-  --border: rgba(51, 51, 51, 0.1);
-  --glass-bg: rgba(255, 255, 255, 0.7);
-  --radius: 0.125rem;
+  --surface: #1A1C1E;
+  --border: #A0AEC0;
+  --glass-bg: rgba(26, 28, 30, 0.7);
+  --radius: 4px;
 }
 
 @theme {
+  --color-industrial-black: #1A1C1E;
+  --color-logic-blue: #0066FF;
+  --color-steel-grey: #A0AEC0;
+  --color-ghost-white: #F8FAFC;
+  
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
@@ -23,6 +28,8 @@
   
   --radius-sm: var(--radius);
   
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;
 
@@ -47,14 +54,14 @@
 
 @layer components {
   .card-glass {
-    @apply bg-[rgba(255,255,255,0.7)] backdrop-blur-md border border-[rgba(51,51,51,0.1)] rounded-xl shadow-sm;
+    @apply bg-industrial-black/70 backdrop-blur-md border border-steel-grey/30 rounded-[4px] shadow-sm;
   }
   
   .btn-primary {
-    @apply inline-flex items-center justify-center rounded-sm bg-accent px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-accent/90 disabled:pointer-events-none disabled:opacity-50;
+    @apply inline-flex items-center justify-center rounded-[4px] bg-logic-blue px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:brightness-110 active:scale-95 shadow-[2px_2px_0px_0px_rgba(255,255,255,0.1)];
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center rounded-sm border border-primary bg-transparent px-6 py-3 text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-white disabled:pointer-events-none disabled:opacity-50;
+    @apply inline-flex items-center justify-center rounded-[4px] border-2 border-logic-blue bg-transparent px-6 py-3 text-sm font-bold uppercase tracking-wider text-logic-blue transition-all hover:bg-logic-blue/10 disabled:pointer-events-none disabled:opacity-50;
   }
 }

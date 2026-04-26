@@ -1,4 +1,4 @@
-import { Cpu, Shield, UserCheck, Zap, Server, Layout, MessageSquare, Terminal } from 'lucide-react';
+import { Cpu, Shield, Zap, Server, Layout, MessageSquare, Terminal } from 'lucide-react';
 
 const RE_ACT_STEPS = [
   {

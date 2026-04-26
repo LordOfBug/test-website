@@ -1,4 +1,4 @@
-import { ChevronRight, Play } from 'lucide-react';
+import { Play } from 'lucide-react';
 
 export default function Hero() {
   return (
