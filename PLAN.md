@@ -1,44 +1,29 @@
-# Implementation Plan: Burros.AI Landing Page
+# Execution Plan: Burros.AI Initialization
 
-## 1. Executive Summary
-The goal is to deliver a professional, high-performance landing page for Burros.AI using Next.js 15 and Tailwind CSS 4. The architecture focuses on modularity, brand consistency, and clear communication of the agentic orchestration value proposition.
+This plan outlines the immediate steps to move from the current skeleton to a functional agentic orchestration engine.
 
-## 2. Technical Architecture
-### Frontend Framework
-- **Framework**: Next.js 15 (App Router)
-- **Language**: TypeScript (Strict mode)
-- **Styling**: Tailwind CSS v4.0
-- **Iconography**: Lucide React
+## Immediate Objectives
+1. **Standardize Communication**: Ensure the Blackboard is the single source of truth for Burro coordination.
+2. **Implement LLM Logic**: Move from mock execution to real LLM-backed reasoning in `BaseBurro`.
+3. **Draft First Playbook**: Create a simple "Hello World" playbook (e.g., "Research and Summarize").
 
-### Component Hierarchy
-- `src/app/layout.tsx`: Root wrapper with `Header` and `Footer`.
-- `src/app/page.tsx`: Main entry point containing sections:
-  - `Hero`: High-impact headline and CTA.
-  - `FeaturesGrid`: Explanation of Corrals, Burros, and Blueprints.
-  - `Workflow`: Visual representation of orchestration.
-- `src/components/branding/`: Reusable logo and brand-specific assets.
+## Step-by-Step Task List
 
-## 3. Implementation Steps
+### 1. Types & Interfaces
+- Update `src/engine/types/index.ts` to include `ILlmClient` and `IPlaybook`.
+- Refine `ITask` to include priority and dependencies.
 
-### Step 1: Branding & Assets
-- Move `burros.png` from vault to `public/`.
-- Standardize the `Logo` component to use the localized asset.
-- Update `globals.css` with primary brand variables.
+### 2. Core Engine
+- Implement a `DefaultLlmClient` using the `LLM_PROVIDER` environment variable.
+- Update `Corral.ts` to support event filtering for Burros.
 
-### Step 2: Content Refinement
-- Update `page.tsx` with high-fidelity copy derived from the `Project Description.md`.
-- Implement responsive grid for "Core Concepts" (Corrals, Burros, Blueprints).
+### 3. Agent Development
+- Implement `ResearcherBurro` with a mock search tool.
+- Implement `SummarizerBurro` that takes Blackboard artifacts and produces a report.
 
-### Step 3: Global Navigation
-- Implement sticky `Header` with anchor links.
-- Build mobile-responsive menu.
+### 4. Integration Test
+- Create `src/demo_playbook.ts` to run a 2-agent collaboration.
 
-### Step 4: Final Polish
-- Add metadata for SEO.
-- Optimize images.
-- Ensure 100/100 Lighthouse performance.
-
-## 4. Verification Plan
-- **Responsiveness**: Test on Mobile (375px), Tablet (768px), and Desktop (1440px).
-- **Branding**: Ensure logo matches the source file and colors align with the "Primary Blue" requirement from PRD.
-- **Functionality**: Verify all CTAs and navigation links.
+## Status Tracking
+- **Phase**: Initialization
+- **Next Successor**: Coordinator (to assign implementation tasks based on `docs/TODO.md`)

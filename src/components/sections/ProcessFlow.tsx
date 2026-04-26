@@ -2,43 +2,43 @@ export default function ProcessFlow() {
   const steps = [
     {
       step: "01",
-      title: "Define Blueprint",
-      description: "Design the task sequence and define requirements for your specific use case."
+      title: "Draft Playbook",
+      description: "Define the workflow logic, success criteria, and required toolsets in a declarative YAML manifest."
     },
     {
       step: "02",
-      title: "Assemble Corral",
-      description: "Select the specialized Burros required to execute each stage of the blueprint."
+      title: "Provision Corral",
+      description: "Initialize a secure compute boundary and deploy specialized Burros with scoped credentials."
     },
     {
       step: "03",
-      title: "Execute & Scale",
-      description: "Watch your agents collaborate in real-time, delivering consistent outcomes at scale."
+      title: "Orchestrate",
+      description: "Monitor real-time ReAct reasoning loops as your fleet executes the mission with human-in-the-loop options."
     }
   ];
 
   return (
-    <section id="process" className="py-24 bg-white">
+    <section id="process" className="py-24 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-20">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">How It Works</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            From architecture to autonomous execution in three simple steps.
+          <h2 className="text-4xl font-bold text-white mb-4 uppercase">Operational Flow</h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-mono text-sm">
+            MISSION_LIFECYCLE_SEQUENCE
           </p>
         </div>
 
         <div className="relative">
           {/* Connector Line (Desktop) */}
-          <div className="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-gray-100 -translate-y-1/2"></div>
+          <div className="hidden md:block absolute top-1/2 left-0 w-full h-px bg-border -translate-y-1/2"></div>
           
           <div className="grid md:grid-cols-3 gap-12 relative z-10">
             {steps.map((item, index) => (
-              <div key={index} className="bg-white text-center">
-                <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-8 shadow-lg">
+              <div key={index} className="bg-card border border-border p-8 text-center transition-all hover:border-primary">
+                <div className="w-16 h-16 bg-primary text-white flex items-center justify-center text-2xl font-bold mx-auto mb-8 font-mono">
                   {item.step}
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{item.title}</h3>
-                <p className="text-gray-600">
+                <h3 className="text-xl font-bold text-white mb-4 uppercase">{item.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
                   {item.description}
                 </p>
               </div>

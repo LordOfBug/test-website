@@ -1,28 +1,28 @@
-# Website Implementation Plan
+# TODO: Burros.AI Execution Roadmap
 
-## 1. Architecture Overview
-- **Framework**: Next.js 14 (App Router)
-- **Styling**: Tailwind CSS
-- **Components**: Atomic design-ish structure
-- **Theme**: Professional Tech (Deep Blues, Silvers, Clean Typography)
+## Phase 1: Core Engine Stabilization (Current)
+- [ ] **Define ITool Interface**: Standardize how tools report inputs/outputs and schemas.
+- [ ] **Implement LLM Client**: Create a unified interface for LLM calls (Gemini/OpenAI).
+- [ ] **Enhance Blackboard**: Add support for structured artifacts and versioned state snapshots.
+- [ ] **BaseBurro Refinement**: Add robust error handling and retry logic for LLM calls.
 
-## 2. File Manifest
-- [x] `src/components/Header.tsx` (Update with better styling)
-- [x] `src/components/Hero.tsx` (Update with better styling)
-- [x] `src/components/Services.tsx` (Create/Update)
-- [x] `src/components/Footer.tsx` (New)
-- [x] `src/app/page.tsx` (Assemble sections)
-- [ ] `src/components/Testimonials.tsx` (New)
-- [x] `src/app/page.tsx` (Add contact form)
+## Phase 2: Specialist Burros & Tooling
+- [ ] **ArchitectBurro Implementation**: Capable of generating system designs and project structures.
+- [ ] **ResearcherBurro Implementation**: Tool-heavy agent for web searching and documentation analysis.
+- [ ] **BashTool Security**: Implement a sandbox or restricted environment for `BashTool`.
+- [ ] **FileTool Expansion**: Support globbing and multi-file operations.
 
-## 3. Implementation Steps
-1. **Theme Setup**: Update `tailwind.config.ts` with brand colors.
-2. **Component Refinement**: 
-    - Improve Header navigation.
-    - Enhance Hero section with a modern look.
-    - Build out Services grid.
-3. **New Sections**:
-    - Add Testimonials section.
-    - Implement a Contact form section.
-    - Add a Footer with site links and copyright.
-4. **Final Assembly**: Integrate all components into the main landing page.
+## Phase 3: Playbooks & Workflow Orchestration
+- [ ] **Task Blueprints**: Define a JSON/YAML schema for "Playbooks".
+- [ ] **Wrangler Playbook Runner**: Implement the logic to step through a Playbook.
+- [ ] **Dynamic Re-planning**: Allow Burros to suggest modifications to the active Playbook.
+
+## Phase 4: UI & Observability
+- [ ] **Corral Dashboard**: Visual representation of the Blackboard and participant status.
+- [ ] **Execution Trace**: A timeline view of events and tool calls within a Corral.
+- [ ] **Interactive Debugger**: Pause execution and manually inject Blackboard events.
+
+## Phase 5: Persistence & Deployment
+- [ ] **D1 Blackboard Storage**: Implement `IBlackboardStorage` using Cloudflare D1.
+- [ ] **R2 Artifact Vault**: Integration for storing larger files and build artifacts.
+- [ ] **Edge Deployment**: Optimize the engine for running in Cloudflare Workers/Pages.

@@ -1,16 +1,50 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #333333;
-  --primary: #333333;
-  --primary-foreground: #ffffff;
-  --accent: #2563eb;
-  --accent-foreground: #ffffff;
-  --surface: #f9fafb;
-  --border: rgba(51, 51, 51, 0.1);
-  --glass-bg: rgba(255, 255, 255, 0.7);
-  --radius: 0.125rem;
+  /* Brand Colors - Based on BRAND_GUIDE.md */
+  --background: #1A1A1A; /* Deep Charcoal */
+  --foreground: #FFFFFF; /* Pure White */
+  
+  --card: #222222;
+  --card-foreground: #FFFFFF;
+  
+  --popover: #1A1A1A;
+  --popover-foreground: #FFFFFF;
+  
+  --primary: #F57C00; /* Burro Orange (Safety Orange) */
+  --primary-foreground: #FFFFFF;
+  
+  --secondary: #2A2A2A;
+  --secondary-foreground: #FFFFFF;
+  
+  --muted: #333333;
+  --muted-foreground: #757575; /* Slate Gray */
+  
+  --accent: #4A90E2; /* Steel Blue */
+  --accent-foreground: #FFFFFF;
+  
+  --destructive: #D32F2F;
+  --destructive-foreground: #FFFFFF;
+
+  --border: #333333;
+  --input: #222222;
+  --ring: #F57C00;
+
+  --radius: 0px; /* Sharp corners per BRAND_GUIDE */
+
+  /* Semantic Status Colors */
+  --status-idle: #757575;
+  --status-working: #F57C00;
+  --status-waiting: #4A90E2;
+  --status-success: #2E7D32;
+  --status-error: #D32F2F;
+
+  /* Legacy compatibility for Hero component */
+  --obsidian: #1A1A1A;
+  --burro-blue: #F57C00; /* Re-mapped to Orange */
+  --cyber-blue: #EF6C00; /* Darker orange */
+  --iron-grey: #757575;
+  --slate-muted: #2A2A2A;
 }
 
 @theme {
@@ -18,10 +52,30 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-accent: var(--accent);
-  --color-surface: var(--surface);
   --color-border: var(--border);
+  --color-card: var(--card);
+  --color-muted: var(--muted);
+
+  --color-status-idle: var(--status-idle);
+  --color-status-working: var(--status-working);
+  --color-status-waiting: var(--status-waiting);
+  --color-status-success: var(--status-success);
+  --color-status-error: var(--status-error);
   
-  --radius-sm: var(--radius);
+  /* Aliases */
+  --color-obsidian: var(--obsidian);
+  --color-burro-blue: var(--burro-blue);
+  --color-cyber-blue: var(--cyber-blue);
+  --color-iron-grey: var(--iron-grey);
+  --color-slate-muted: var(--slate-muted);
+  
+  /* Brand Typography */
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
   
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;
@@ -43,18 +97,35 @@
   body {
     @apply bg-background text-foreground font-sans antialiased;
   }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans font-bold tracking-tight uppercase;
+  }
 }
 
 @layer components {
-  .card-glass {
-    @apply bg-[rgba(255,255,255,0.7)] backdrop-blur-md border border-[rgba(51,51,51,0.1)] rounded-xl shadow-sm;
+  .corral-card {
+    @apply bg-card border border-border p-6 shadow-none transition-all hover:border-primary;
   }
   
-  .btn-primary {
-    @apply inline-flex items-center justify-center rounded-sm bg-accent px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-accent/90 disabled:pointer-events-none disabled:opacity-50;
+  .burro-status-badge {
+    @apply px-2 py-0.5 text-[10px] font-mono uppercase tracking-wider border;
   }
 
-  .btn-secondary {
-    @apply inline-flex items-center justify-center rounded-sm border border-primary bg-transparent px-6 py-3 text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-white disabled:pointer-events-none disabled:opacity-50;
+  .status-idle { @apply bg-status-idle/10 text-status-idle border-status-idle/20; }
+  .status-working { @apply bg-status-working/10 text-status-working border-status-working/20; }
+  .status-waiting { @apply bg-status-waiting/10 text-status-waiting border-status-waiting/20; }
+  .status-success { @apply bg-status-success/10 text-status-success border-status-success/20; }
+  .status-error { @apply bg-status-error/10 text-status-error border-status-error/20; }
+  
+  .blackboard-entry {
+    @apply font-mono text-sm bg-muted/30 p-2 border border-border/50;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white font-bold py-4 px-8 transition-all hover:bg-cyber-blue uppercase tracking-widest text-sm;
+  }
+
+  .btn-outline {
+    @apply border border-iron-grey text-white font-bold py-4 px-8 transition-all hover:border-white uppercase tracking-widest text-sm;
   }
 }

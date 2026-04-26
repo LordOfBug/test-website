@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 @import "tailwindcss";
 
 @theme {
@@ -68,5 +69,74 @@ body {
 
   .subheading {
     @apply text-xl text-muted-foreground max-w-2xl mx-auto mb-10;
+=======
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Brand Colors - Dark Theme Defaults */
+  --background: #1A1A1A;
+  --foreground: #FAFAFA;
+  
+  --card: #262626;
+  --card-foreground: #FAFAFA;
+  
+  --popover: #1A1A1A;
+  --popover-foreground: #FAFAFA;
+  
+  --primary: #2563EB;
+  --primary-foreground: #FFFFFF;
+  
+  --secondary: #333333;
+  --secondary-foreground: #FAFAFA;
+  
+  --muted: #404040;
+  --muted-foreground: #A3A3A3;
+  
+  --accent: #3b82f6; /* Lighter blue for interactive highlights */
+  --accent-foreground: #FAFAFA;
+  
+  --destructive: #EF4444;
+  --destructive-foreground: #FAFAFA;
+
+  --border: #333333;
+  --input: #262626;
+  --ring: #2563EB;
+
+  --radius: 0.5rem;
+
+  /* Semantic Status Colors */
+  --status-idle: #737373;
+  --status-working: #2563EB;
+  --status-waiting: #F59E0B;
+  --status-success: #10B981;
+  --status-error: #EF4444;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* Custom Component Classes */
+@layer components {
+  .corral-card {
+    @apply bg-card border border-border rounded-lg p-4 shadow-lg transition-all;
+  }
+  
+  .burro-status-badge {
+    @apply px-2 py-1 rounded-full text-xs font-mono uppercase tracking-wider;
+  }
+  
+  .blackboard-entry {
+    @apply font-mono text-sm bg-muted/30 p-2 rounded border border-border/50;
+>>>>>>> Stashed changes
   }
 }

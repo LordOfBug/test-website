@@ -54,23 +54,23 @@ function MessageSquareIcon(props: any) {
 
 export default function Capabilities() {
   return (
-    <section id="capabilities" className="py-24 border-y border-secondary/10 bg-surface/30">
+    <section id="capabilities" className="py-24 border-y border-border bg-card">
       <div className="max-w-7xl mx-auto px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Core Capabilities</h2>
-          <p className="text-secondary max-w-2xl mx-auto text-lg">
-            Everything you need to orchestrate a production-ready AI agent fleet.
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 uppercase tracking-tighter">Core Capabilities</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto text-lg font-mono text-sm">
+            ENGINEERING_SPECIFICATIONS
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {CAPABILITIES.map((cap, i) => (
-            <div key={i} className="card-glass group hover:bg-surface transition-colors">
-              <div className="w-12 h-12 rounded-sm bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-                <cap.icon className="text-primary" size={24} />
+            <div key={i} className="corral-card group">
+              <div className="w-12 h-12 bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+                <cap.icon className="text-primary group-hover:text-white" size={24} />
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">{cap.title}</h3>
-              <p className="text-secondary text-sm leading-relaxed">
+              <h3 className="text-xl font-bold text-white mb-4 uppercase">{cap.title}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 {cap.description}
               </p>
             </div>
