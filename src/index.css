@@ -1,35 +1,27 @@
 @import "tailwindcss";
 
 @theme {
-  /* Brand Colors */
-  --color-primary: #0047AB;
-  --color-primary-hover: #003380;
-  --color-secondary: #C0C0C0;
-  --color-accent: #F59E0B; /* HITL Warning/Action */
+  /* Burros.AI 'Rugged Tech' Color Palette */
+  --color-slate-dark: #1A1F24;
+  --color-burnt-orange: #D97706;
+  --color-sand: #F3E9D2;
+  --color-dusty-gray: #4B5563;
+  --color-glow-blue: #38BDF8;
   
-  /* Semantic Colors */
-  --color-bg-dark: #0a0a0a;
-  --color-surface: rgba(255, 255, 255, 0.03);
-  --color-border-muted: rgba(192, 192, 192, 0.2);
+  /* Semantic Mappings */
+  --color-background: var(--color-slate-dark);
+  --color-foreground: var(--color-sand);
+  --color-primary: var(--color-burnt-orange);
+  --color-accent: var(--color-glow-blue);
+  --color-border-muted: rgba(75, 85, 99, 0.3);
 
   /* Spacing & Radii */
-  --radius-brand: 6px;
+  --radius-brand: 4px;
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --card: #f9f9f9;
-  --card-foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: var(--color-bg-dark);
-    --foreground: #ededed;
-    --card: var(--color-surface);
-    --card-foreground: #ededed;
-  }
+  --background: var(--color-slate-dark);
+  --foreground: var(--color-sand);
 }
 
 body {
@@ -39,34 +31,28 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Design System Utilities */
 @layer components {
   .btn-primary {
-    @apply px-6 py-3 bg-primary text-white font-semibold rounded-[--radius-brand] transition-colors hover:bg-primary-hover;
+    @apply px-8 py-4 bg-burnt-orange text-slate-dark font-bold uppercase tracking-wider rounded-[--radius-brand] transition-all hover:brightness-110 active:scale-95 shadow-[0_4px_0_0_rgba(0,0,0,0.3)];
   }
   
-  .btn-secondary {
-    @apply px-6 py-3 border border-secondary/30 text-foreground font-semibold rounded-[--radius-brand] transition-all hover:bg-secondary/10;
+  .btn-outline {
+    @apply px-8 py-4 border-2 border-burnt-orange text-burnt-orange font-bold uppercase tracking-wider rounded-[--radius-brand] transition-all hover:bg-burnt-orange/10;
   }
 
-  .card-glass {
-    @apply bg-card border border-[--color-border-muted] rounded-xl backdrop-blur-sm p-6;
+  .corral-card {
+    @apply bg-white/5 border border-white/10 rounded-lg p-8 backdrop-blur-md transition-all duration-300 hover:border-burnt-orange hover:shadow-[0_0_20px_rgba(217,119,6,0.2)];
   }
 
-  .code-block {
-    @apply font-mono text-sm bg-black/50 border border-white/10 rounded-lg p-4 overflow-x-auto;
-  }
-
-  /* Visual Hierarchy Helpers */
   .section-container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20;
+    @apply max-w-7xl mx-auto px-6 py-24;
   }
 
-  .heading-xl {
-    @apply text-4xl md:text-6xl font-bold tracking-tight mb-6;
+  .heading-hero {
+    @apply text-5xl md:text-8xl font-black uppercase tracking-tighter mb-6 leading-none;
   }
 
-  .subheading {
-    @apply text-xl text-muted-foreground max-w-2xl mx-auto mb-10;
+  .blueprint-line {
+    @apply stroke-glow-blue stroke-[2] fill-none;
   }
 }
