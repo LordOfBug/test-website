@@ -12,9 +12,9 @@ export default function Hero() {
           <span className="text-xs font-mono uppercase tracking-[0.2em] text-zinc-dimmed">System Status: Optimal</span>
         </div>
 
-        <h1 className="max-w-5xl text-5xl font-extrabold tracking-tighter text-muted-silver md:text-7xl lg:text-8xl leading-[0.9] uppercase">
+        <h1 className="max-w-5xl text-5xl font-extrabold tracking-tighter text-muted-silver md:text-7xl lg:text-8xl leading-[0.95] uppercase">
           Industrial Precision <br/>
-          <span className="text-electric-blue">Orchestration</span>
+          <span className="text-safety-orange">Orchestration</span>
         </h1>
         
         <p className="max-w-2xl text-lg text-zinc-dimmed md:text-xl leading-relaxed font-mono">
@@ -45,11 +45,11 @@ export default function Hero() {
                <div className="w-2 h-2 bg-slate-gray" />
                <div className="ml-4 text-[10px] text-zinc-dimmed font-mono tracking-widest uppercase">CORRAL://FLEET_ALPHA/MONITOR</div>
             </div>
-            <div className="p-12 text-left font-mono text-xs text-zinc-dimmed/40 flex flex-col gap-2">
-              <div>> INITIALIZING BURRO_ARCHITECT...</div>
-              <div>> LOADING BLUEPRINT: DATA_REFINERY_V4</div>
-              <div>> ESTABLISHING SECURE CORRAL ENVELOPE...</div>
-              <div className="text-electric-blue">> CONNECTION ESTABLISHED</div>
+            <div className="p-12 text-left font-mono text-[11px] text-zinc-dimmed/60 flex flex-col gap-3">
+              <div>{'>'} INITIALIZING BURRO_ARCHITECT...</div>
+              <div>{'>'} LOADING BLUEPRINT: DATA_REFINERY_V4</div>
+              <div>{'>'} ESTABLISHING SECURE CORRAL ENVELOPE...</div>
+              <div className="text-electric-blue">{'>'} CONNECTION ESTABLISHED</div>
             </div>
           </div>
         </div>

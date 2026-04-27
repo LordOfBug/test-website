@@ -4,9 +4,9 @@ import React from 'react';
 
 const PulseDot = ({ state }: { state: 'idle' | 'thinking' | 'executing' }) => {
   const colors = {
-    idle: 'bg-circuit-green',
-    thinking: 'bg-agentic-violet',
-    executing: 'bg-logic-blue',
+    idle: 'bg-zinc-dimmed',
+    thinking: 'bg-safety-orange',
+    executing: 'bg-electric-blue',
   };
   
   return (
@@ -19,7 +19,7 @@ const PulseDot = ({ state }: { state: 'idle' | 'thinking' | 'executing' }) => {
   );
 };
 
-const ProgressBar = ({ progress }: { progress: number }) => {
+const ProgressBar = ({ progress, color = 'bg-electric-blue' }: { progress: number; color?: string }) => {
   const segments = 10;
   const activeSegments = Math.floor((progress / 100) * segments);
   
@@ -29,7 +29,7 @@ const ProgressBar = ({ progress }: { progress: number }) => {
         <div 
           key={i} 
           className={`h-full flex-1 transition-colors duration-300 ${
-            i < activeSegments ? 'bg-logic-blue' : 'bg-[#3A3F45]'
+            i < activeSegments ? color : 'bg-slate-gray'
           }`}
         />
       ))}
@@ -48,32 +48,32 @@ interface AgentProps {
 
 const AgentCard = ({ id, name, status, progress, cpu, tokens }: AgentProps) => {
   return (
-    <div className="agent-card group hover:border-logic-blue cursor-pointer">
+    <div className="corral-card group cursor-pointer overflow-hidden min-h-[220px] flex flex-col justify-between">
       <div className="flex justify-between items-start mb-4">
-        <div>
-          <p className="text-[10px] text-steel-grey font-mono mb-1">{id}</p>
-          <h3 className="text-lg font-bold tracking-tight text-ghost-white">{name}</h3>
+        <div className="min-w-0">
+          <p className="text-[10px] text-zinc-dimmed font-mono mb-1 truncate">{id}</p>
+          <h3 className="text-lg font-bold tracking-tight text-muted-silver truncate">{name}</h3>
         </div>
         <PulseDot state={status} />
       </div>
       
       <div className="space-y-4">
         <div>
-          <div className="flex justify-between text-[11px] font-mono text-steel-grey mb-1.5">
+          <div className="flex justify-between text-[11px] font-mono text-zinc-dimmed mb-1.5">
             <span>TASK PROGRESS</span>
             <span>{progress}%</span>
           </div>
-          <ProgressBar progress={progress} />
+          <ProgressBar progress={progress} color={status === 'executing' ? 'bg-electric-blue' : status === 'thinking' ? 'bg-safety-orange' : 'bg-zinc-dimmed'} />
         </div>
         
-        <div className="grid grid-cols-2 gap-2 pt-2 border-t border-steel-grey/20">
-          <div>
-            <p className="text-[10px] text-steel-grey font-mono uppercase">CPU Usage</p>
-            <p className="text-xs font-mono text-ghost-white">{cpu}</p>
+        <div className="grid grid-cols-2 gap-4 pt-2 border-t border-slate-gray">
+          <div className="min-w-0">
+            <p className="text-[10px] text-zinc-dimmed font-mono uppercase">CPU Usage</p>
+            <p className="text-xs font-mono text-muted-silver truncate">{cpu}</p>
           </div>
-          <div>
-            <p className="text-[10px] text-steel-grey font-mono uppercase">Tokens/Sec</p>
-            <p className="text-xs font-mono text-ghost-white">{tokens}</p>
+          <div className="min-w-0">
+            <p className="text-[10px] text-zinc-dimmed font-mono uppercase">Tokens/Sec</p>
+            <p className="text-xs font-mono text-muted-silver truncate">{tokens}</p>
           </div>
         </div>
       </div>
