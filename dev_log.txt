@@ -31,3 +31,4 @@ Watchpack Error (initial scan): Error: ETIMEDOUT: connection timed out, lstat '/
   · cpus: 1
 
 Watchpack Error (initial scan): Error: ETIMEDOUT: connection timed out, lstat '/Users/ning/OrbStack'
+ GET / 200 in 1799ms (next.js: 1549ms, application-code: 250ms)
