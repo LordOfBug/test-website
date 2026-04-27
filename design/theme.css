@@ -1,0 +1,113 @@
+/* 
+  THEME: Industrial Precision Orchestration
+  Tailwind CSS 4.0 / Modern CSS Variables
+*/
+
+@theme {
+  /* Colors */
+  --color-obsidian: #0B0B0B;
+  --color-slate-dark: #18181B;
+  --color-slate-gray: #27272A;
+  --color-electric-blue: #2E79FF;
+  --color-safety-orange: #FF5C00;
+  --color-muted-silver: #FAFAFA;
+  --color-zinc-dimmed: #A1A1AA;
+
+  /* Typography */
+  --font-display: "Inter Tight", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Shadow / Glows */
+  --shadow-glow-blue: 0 0 20px rgba(46, 121, 255, 0.15);
+  --shadow-glow-orange: 0 0 20px rgba(255, 92, 0, 0.15);
+  
+  /* Border Radii (Industrial Sharpness) */
+  --radius-sharp: 0px;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-obsidian);
+    color: var(--color-muted-silver);
+    font-family: var(--font-display);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    text-transform: uppercase;
+    letter-spacing: -0.05em;
+    font-weight: 800;
+  }
+
+  code, pre, .technical-label {
+    font-family: var(--font-mono);
+  }
+}
+
+@layer components {
+  /* Industrial Card Utility */
+  .corral-card {
+    background-color: var(--color-slate-dark);
+    border: 1px solid var(--color-slate-gray);
+    padding: 1.5rem;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .corral-card:hover {
+    border-color: var(--color-electric-blue);
+    box-shadow: var(--shadow-glow-blue);
+  }
+
+  /* Machined Button */
+  .btn-precision {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.875rem;
+    background-color: var(--color-electric-blue);
+    color: white;
+    border: none;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%);
+    transition: filter 0.2s;
+  }
+
+  .btn-precision:hover {
+    filter: brightness(1.1);
+    cursor: pointer;
+  }
+
+  /* Blueprint Node */
+  .blueprint-node {
+    border: 1px solid var(--color-slate-gray);
+    background: var(--color-obsidian);
+    width: 12px;
+    height: 12px;
+    position: relative;
+  }
+
+  .blueprint-node.active {
+    background: var(--color-electric-blue);
+    box-shadow: 0 0 8px var(--color-electric-blue);
+  }
+
+  /* Section Dividers */
+  .industrial-divider {
+    height: 1px;
+    background: linear-gradient(90deg, var(--color-slate-gray) 0%, transparent 100%);
+    width: 100%;
+    margin: 2rem 0;
+  }
+}
+
+/* Custom Utilities */
+.tracking-blueprint {
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: var(--color-zinc-dimmed);
+}
