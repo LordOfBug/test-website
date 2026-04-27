@@ -1,7 +1,11 @@
+"use client";
+
 import Image from 'next/image';
-import { BlueprintVisualizer } from '@/components/BlueprintVisualizer';
+import dynamic from 'next/dynamic';
 import { CorralCard } from '@/components/CorralCard';
 import { LayoutGrid, Users, Zap, Shield, Workflow, Terminal } from 'lucide-react';
+
+const BlueprintVisualizer = dynamic(() => import('@/components/BlueprintVisualizer').then(m => m.BlueprintVisualizer), { ssr: false });
 
 export default function LandingPage() {
   return (

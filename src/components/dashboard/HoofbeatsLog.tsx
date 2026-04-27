@@ -10,10 +10,23 @@ interface LogEntry {
 }
 
 const HoofbeatsLog = () => {
-  const logs: LogEntry[] = [
+  const [logs, setLogs] = React.useState<LogEntry[]>([
     { id: '1', timestamp: '14:20:01', level: 'INFO', message: 'Initializing Corral Protocol...' },
     { id: '2', timestamp: '14:20:05', level: 'ACTION', message: 'Burro-Alpha spawning in workspace.' },
-  ];
+  ]);
+
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      const newLog: LogEntry = {
+        id: Math.random().toString(),
+        timestamp: new Date().toLocaleTimeString([], { hour12: false }),
+        level: Math.random() > 0.8 ? 'HITL' : 'ACTION',
+        message: 'System heartbeat verified.'
+      };
+      setLogs(prev => [...prev.slice(-15), newLog]);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   const getLevelColor = (level: LogEntry['level']) => {
     switch (level) {

@@ -1,7 +1,11 @@
+"use client";
+
 import React from 'react';
-import AgentCard from '@/components/dashboard/AgentCard';
-import HoofbeatsLog from '@/components/dashboard/HoofbeatsLog';
-import Blackboard from '@/components/dashboard/Blackboard';
+import dynamic from 'next/dynamic';
+
+const AgentCard = dynamic(() => import('@/components/dashboard/AgentCard'), { ssr: false });
+const HoofbeatsLog = dynamic(() => import('@/components/dashboard/HoofbeatsLog'), { ssr: false });
+const Blackboard = dynamic(() => import('@/components/dashboard/Blackboard'), { ssr: false });
 
 export default function DashboardPage() {
   return (

@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 
 const PulseDot = ({ state }: { state: 'idle' | 'thinking' | 'executing' }) => {
