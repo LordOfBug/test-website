@@ -1,0 +1,12 @@
+
+> burro-workspace@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.4 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://169.254.11.107:3000
+- Environments: .env
+✓ Ready in 423ms
+
+ GET /dashboard 200 in 929ms (next.js: 675ms, application-code: 255ms)
+✓ Compiled in 480ms

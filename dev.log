@@ -1,0 +1,18 @@
+
+> burro-workspace@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.4 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://169.254.11.107:3000
+- Environments: .env
+✓ Ready in 687ms
+⨯ Another next dev server is already running.
+
+- Local:        http://localhost:3001
+- PID:          29335
+- Dir:          /Users/ning/burro-workspace
+- Log:          .next/dev/logs/next-development.log
+
+Run kill 29335 to stop it.
+[?25h
