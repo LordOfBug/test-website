@@ -1,46 +1,48 @@
 @import "tailwindcss";
 
 :root {
-  --background: #1A1C1E;
-  --foreground: #F8FAFC;
-  --primary: #0066FF;
-  --primary-foreground: #ffffff;
-  --accent: #0066FF;
-  --accent-foreground: #ffffff;
-  --surface: #1A1C1E;
-  --border: #A0AEC0;
-  --glass-bg: rgba(26, 28, 30, 0.7);
-  --radius: 4px;
+  /* Obsidian #0A0A0B */
+  --background: 240 10% 3.9%;
+  /* Pure White #FFFFFF */
+  --foreground: 0 0% 100%;
+
+  /* Slate Gray #1C1C1E */
+  --card: 240 10% 5.9%;
+  --card-foreground: 0 0% 100%;
+
+  /* Electric Blue #2E79FF */
+  --primary: 217 100% 59%;
+  --primary-foreground: 0 0% 100%;
+
+  /* Muted Silver #A1A1AA */
+  --muted: 240 5% 64.9%;
+  --muted-foreground: 240 5% 64.9%;
+
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+
+  /* Chiseled Geometry */
+  --radius: 0.25rem;
+  --border: 240 3.7% 15.9%;
 }
 
 @theme {
-  --color-industrial-black: #1A1C1E;
-  --color-logic-blue: #0066FF;
-  --color-steel-grey: #A0AEC0;
-  --color-ghost-white: #F8FAFC;
+  --color-obsidian: #0A0A0B;
+  --color-slate-gray: #1C1C1E;
+  --color-electric-blue: #2E79FF;
+  --color-cyan-spark: #4ADE80;
+  --color-muted-silver: #A1A1AA;
   
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
-  --color-accent: var(--accent);
-  --color-surface: var(--surface);
+  --color-secondary: #27272a;
+  --color-card: var(--card);
   --color-border: var(--border);
   
   --radius-sm: var(--radius);
   
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-
-  --animate-accordion-down: accordion-down 0.2s ease-out;
-  --animate-accordion-up: accordion-up 0.2s ease-out;
-
-  @keyframes accordion-down {
-    from { height: 0; }
-    to { height: var(--radix-accordion-content-height); }
-  }
-  @keyframes accordion-up {
-    from { height: var(--radix-accordion-content-height); }
-    to { height: 0; }
-  }
 }
 
 @layer base {
@@ -48,20 +50,41 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-[#0A0A0B] text-white font-sans antialiased;
   }
 }
 
 @layer components {
-  .card-glass {
-    @apply bg-industrial-black/70 backdrop-blur-md border border-steel-grey/30 rounded-[4px] shadow-sm;
+  .corral-container {
+    @apply border border-border bg-slate-gray/50 p-6 rounded-lg;
+    box-shadow: 0 4px 24px -12px rgba(0, 0, 0, 0.5);
   }
-  
+
+  .burro-card {
+    @apply border border-border bg-slate-gray/30 p-6 rounded-[4px] transition-all duration-200 hover:border-electric-blue/50;
+  }
+
+  .blueprint-node {
+    @apply font-mono text-sm bg-secondary p-2 border-l-2 border-electric-blue;
+  }
+
+  .electric-glow {
+    box-shadow: 0 0 20px -5px #2E79FF;
+  }
+
+  .hero-gradient {
+    background: radial-gradient(circle at 50% -20%, #1e293b 0%, #0A0A0B 100%);
+  }
+
   .btn-primary {
-    @apply inline-flex items-center justify-center rounded-[4px] bg-logic-blue px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:brightness-110 active:scale-95 shadow-[2px_2px_0px_0px_rgba(255,255,255,0.1)];
+    @apply inline-flex items-center justify-center rounded-[4px] bg-electric-blue px-8 py-4 text-sm font-bold uppercase tracking-wider text-white transition-all hover:brightness-110 active:scale-95 shadow-[2px_2px_0px_0px_rgba(255,255,255,0.1)];
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center rounded-[4px] border-2 border-logic-blue bg-transparent px-6 py-3 text-sm font-bold uppercase tracking-wider text-logic-blue transition-all hover:bg-logic-blue/10 disabled:pointer-events-none disabled:opacity-50;
+    @apply inline-flex items-center justify-center rounded-[4px] border-2 border-electric-blue bg-transparent px-8 py-4 text-sm font-bold uppercase tracking-wider text-electric-blue transition-all hover:bg-electric-blue/10;
+  }
+  
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 }

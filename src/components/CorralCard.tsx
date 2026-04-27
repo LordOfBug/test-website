@@ -10,12 +10,12 @@ interface CorralCardProps {
 
 export const CorralCard = ({ title, description, icon: Icon, className }: CorralCardProps) => {
   return (
-    <div className={cn("corral-card group", className)}>
-      <div className="w-12 h-12 bg-burnt-orange/10 rounded-lg flex items-center justify-center mb-6 transition-colors group-hover:bg-burnt-orange/20">
-        <Icon className="w-6 h-6 text-burnt-orange" />
+    <div className={cn("burro-card group", className)}>
+      <div className="w-12 h-12 bg-electric-blue/10 rounded-[4px] flex items-center justify-center mb-6 transition-colors group-hover:bg-electric-blue/20">
+        <Icon className="w-6 h-6 text-electric-blue" />
       </div>
-      <h3 className="text-2xl font-bold mb-4 text-sand">{title}</h3>
-      <p className="text-dusty-gray leading-relaxed">
+      <h3 className="text-xl font-black uppercase tracking-tight mb-4 text-white">{title}</h3>
+      <p className="text-muted-silver leading-relaxed text-sm">
         {description}
       </p>
     </div>
