@@ -1,48 +1,53 @@
 @import "tailwindcss";
 
-:root {
-  /* Obsidian #0A0A0B */
-  --background: 240 10% 3.9%;
-  /* Pure White #FFFFFF */
-  --foreground: 0 0% 100%;
-
-  /* Slate Gray #1C1C1E */
-  --card: 240 10% 5.9%;
-  --card-foreground: 0 0% 100%;
-
-  /* Electric Blue #2E79FF */
-  --primary: 217 100% 59%;
-  --primary-foreground: 0 0% 100%;
-
-  /* Muted Silver #A1A1AA */
-  --muted: 240 5% 64.9%;
-  --muted-foreground: 240 5% 64.9%;
-
-  --secondary: 240 3.7% 15.9%;
-  --secondary-foreground: 0 0% 98%;
-
-  /* Chiseled Geometry */
-  --radius: 0.25rem;
-  --border: 240 3.7% 15.9%;
-}
-
 @theme {
-  --color-obsidian: #0A0A0B;
-  --color-slate-gray: #1C1C1E;
-  --color-electric-blue: #2E79FF;
-  --color-cyan-spark: #4ADE80;
-  --color-muted-silver: #A1A1AA;
+  --color-carbon: #0A0A0B;
+  --color-graphite: #161618;
+  --color-steel: #2D2D30;
+  --color-stark-white: #F5F5F7;
+  --color-terminal-green: #10B981;
+  --color-warning-amber: #F59E0B;
   
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
-  --color-secondary: #27272a;
+  --color-secondary: var(--color-steel);
   --color-card: var(--card);
   --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
   
-  --radius-sm: var(--radius);
+  --radius-sm: 2px;
   
-  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-mono: "Roboto Mono", "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+:root {
+  --background: #0a0a0b;
+  --foreground: #f5f5f7;
+  --card: #161618;
+  --card-foreground: #f5f5f7;
+  --primary: #f5f5f7;
+  --primary-foreground: #0a0a0b;
+  --muted: #2d2d30;
+  --muted-foreground: #a1a1aa;
+  --border: #2d2d30;
+
+  /* Spacing - 8px Base Grid */
+  --space-xs: 0.25rem; /* 4px */
+  --space-sm: 0.5rem;  /* 8px */
+  --space-md: 1rem;    /* 16px */
+  --space-lg: 1.5rem;  /* 24px */
+  --space-xl: 2rem;    /* 32px */
+
+  /* Border Radii - Minimal/Sharp */
+  --radius-sm: 1px;
+  --radius-md: 2px;
+  --radius-lg: 4px;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @layer base {
@@ -50,41 +55,55 @@
     @apply border-border;
   }
   body {
-    @apply bg-[#0A0A0B] text-white font-sans antialiased;
+    @apply bg-carbon text-stark-white font-sans antialiased;
   }
 }
 
 @layer components {
+  /* Industrial-grade containers */
   .corral-container {
-    @apply border border-border bg-slate-gray/50 p-6 rounded-lg;
-    box-shadow: 0 4px 24px -12px rgba(0, 0, 0, 0.5);
+    @apply border border-steel bg-graphite/50 p-6 rounded-md;
+    box-shadow: 0 4px 24px -12px rgba(0, 0, 0, 0.7);
   }
 
   .burro-card {
-    @apply border border-border bg-slate-gray/30 p-6 rounded-[4px] transition-all duration-200 hover:border-electric-blue/50;
+    @apply border border-steel bg-graphite p-6 rounded-sm transition-all duration-150 hover:border-stark-white/30;
   }
 
   .blueprint-node {
-    @apply font-mono text-sm bg-secondary p-2 border-l-2 border-electric-blue;
+    @apply font-mono text-sm bg-steel/20 p-3 border-l-2 border-stark-white;
   }
 
-  .electric-glow {
-    box-shadow: 0 0 20px -5px #2E79FF;
+  /* Technical signals */
+  .active-pulse {
+    @apply relative;
+  }
+  .active-pulse::after {
+    content: '';
+    @apply absolute -left-1 -top-1 w-2 h-2 bg-terminal-green rounded-full;
+    box-shadow: 0 0 8px #10B981;
   }
 
-  .hero-gradient {
-    background: radial-gradient(circle at 50% -20%, #1e293b 0%, #0A0A0B 100%);
-  }
-
+  /* Industrial buttons */
   .btn-primary {
-    @apply inline-flex items-center justify-center rounded-[4px] bg-electric-blue px-8 py-4 text-sm font-bold uppercase tracking-wider text-white transition-all hover:brightness-110 active:scale-95 shadow-[2px_2px_0px_0px_rgba(255,255,255,0.1)];
+    @apply inline-flex items-center justify-center rounded-sm bg-stark-white px-8 py-3 text-sm font-bold uppercase tracking-widest text-carbon transition-all hover:bg-white active:scale-95;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center rounded-[4px] border-2 border-electric-blue bg-transparent px-8 py-4 text-sm font-bold uppercase tracking-wider text-electric-blue transition-all hover:bg-electric-blue/10;
+    @apply inline-flex items-center justify-center rounded-sm border border-steel bg-transparent px-8 py-3 text-sm font-bold uppercase tracking-widest text-stark-white transition-all hover:bg-steel/30;
   }
   
   .section-container {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Technical Log Style */
+  .activity-log {
+    @apply font-mono text-xs text-muted-foreground bg-black/40 p-4 border-t border-steel;
+    line-height: 1.6;
+  }
+
+  .panel {
+    @apply bg-graphite border border-steel rounded-sm;
   }
 }

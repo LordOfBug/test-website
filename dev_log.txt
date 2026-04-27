@@ -32,3 +32,35 @@ Watchpack Error (initial scan): Error: ETIMEDOUT: connection timed out, lstat '/
 
 Watchpack Error (initial scan): Error: ETIMEDOUT: connection timed out, lstat '/Users/ning/OrbStack'
  GET / 200 in 1799ms (next.js: 1549ms, application-code: 250ms)
+ GET / 200 in 363ms (next.js: 161ms, application-code: 202ms)
+ GET / 200 in 41ms (next.js: 9ms, application-code: 32ms)
+✓ Compiled in 100ms
+✓ Compiled in 72ms
+✓ Compiled in 70ms
+ GET / 200 in 168ms (next.js: 123ms, application-code: 45ms)
+✓ Compiled in 0ms
+ GET / 200 in 136ms (next.js: 98ms, application-code: 38ms)
+Error: Cannot apply unknown utility class `p-6`
+    [2m[at onInvalidCandidate (/Users/ning/burro-workspace/node_modules/tailwindcss/dist/lib.js:21:1511)][0m
+    [2m[at Ee (/Users/ning/burro-workspace/node_modules/tailwindcss/dist/lib.js:16:37066)][0m
+    [2m[at /Users/ning/burro-workspace/node_modules/tailwindcss/dist/lib.js:21:355][0m
+    [2m[at _r (/Users/ning/burro-workspace/node_modules/tailwindcss/dist/lib.js:3:1733)][0m
+    [2m[at I (/Users/ning/burro-workspace/node_modules/tailwindcss/dist/lib.js:3:1377)][0m
+    [2m[at Te (/Users/ning/burro-workspace/node_modules/tailwindcss/dist/lib.js:21:172)][0m
+    [2m[at mn (/Users/ning/burro-workspace/node_modules/tailwindcss/dist/lib.js:38:294)][0m
+    [2m[at process.processTicksAndRejections (node:internal/process/task_queues:95:5)][0m
+    [2m[at async gn (/Users/ning/burro-workspace/node_modules/tailwindcss/dist/lib.js:38:631)][0m
+    [2m[at async Xr (/Users/ning/burro-workspace/node_modules/@tailwindcss/node/dist/index.js:10:3416)][0m
+Error: Cannot apply unknown utility class `text-muted-foreground`
+    [2m[at onInvalidCandidate (/Users/ning/burro-workspace/node_modules/tailwindcss/dist/lib.js:21:1511)][0m
+    [2m[at Ee (/Users/ning/burro-workspace/node_modules/tailwindcss/dist/lib.js:16:37066)][0m
+    [2m[at /Users/ning/burro-workspace/node_modules/tailwindcss/dist/lib.js:21:355][0m
+    [2m[at _r (/Users/ning/burro-workspace/node_modules/tailwindcss/dist/lib.js:3:1733)][0m
+    [2m[at I (/Users/ning/burro-workspace/node_modules/tailwindcss/dist/lib.js:3:1377)][0m
+    [2m[at Te (/Users/ning/burro-workspace/node_modules/tailwindcss/dist/lib.js:21:172)][0m
+    [2m[at mn (/Users/ning/burro-workspace/node_modules/tailwindcss/dist/lib.js:38:294)][0m
+    [2m[at async gn (/Users/ning/burro-workspace/node_modules/tailwindcss/dist/lib.js:38:631)][0m
+    [2m[at async Xr (/Users/ning/burro-workspace/node_modules/@tailwindcss/node/dist/index.js:10:3416)][0m
+    [2m[at async N (/Users/ning/burro-workspace/node_modules/@tailwindcss/postcss/dist/index.js:10:3979)][0m
+✓ Compiled in 452ms
+ GET / 200 in 36ms (next.js: 7ms, application-code: 29ms)

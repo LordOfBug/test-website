@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Burros.AI | Unleash the Herd",
-  description: "Rugged agentic orchestration for industrial-grade AI workflows.",
+  title: "Burros.AI Dashboard",
+  description: "Industrial-grade agentic orchestration monitoring.",
 };
 
 export default function RootLayout({
@@ -13,7 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased">
+      <body className="antialiased min-h-screen flex flex-col">
         {children}
       </body>
     </html>
