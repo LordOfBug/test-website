@@ -1,109 +1,115 @@
 @import "tailwindcss";
 
+/* 
+  THEME: Industrial Precision Orchestration
+  Tailwind CSS 4.0 / Modern CSS Variables
+*/
+
 @theme {
-  --color-carbon: #0A0A0B;
-  --color-graphite: #161618;
-  --color-steel: #2D2D30;
-  --color-stark-white: #F5F5F7;
-  --color-terminal-green: #10B981;
-  --color-warning-amber: #F59E0B;
+  /* Colors */
+  --color-obsidian: #0B0B0B;
+  --color-slate-dark: #18181B;
+  --color-slate-gray: #27272A;
+  --color-electric-blue: #2E79FF;
+  --color-safety-orange: #FF5C00;
+  --color-muted-silver: #FAFAFA;
+  --color-zinc-dimmed: #A1A1AA;
+
+  /* Typography */
+  --font-display: "Inter Tight", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Shadow / Glows */
+  --shadow-glow-blue: 0 0 20px rgba(46, 121, 255, 0.15);
+  --shadow-glow-orange: 0 0 20px rgba(255, 92, 0, 0.15);
   
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-primary: var(--primary);
-  --color-secondary: var(--color-steel);
-  --color-card: var(--card);
-  --color-border: var(--border);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  
+  /* Border Radii (Industrial Sharpness) */
+  --radius-sharp: 0px;
   --radius-sm: 2px;
-  
-  --font-mono: "Roboto Mono", "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
-}
-
-:root {
-  --background: #0a0a0b;
-  --foreground: #f5f5f7;
-  --card: #161618;
-  --card-foreground: #f5f5f7;
-  --primary: #f5f5f7;
-  --primary-foreground: #0a0a0b;
-  --muted: #2d2d30;
-  --muted-foreground: #a1a1aa;
-  --border: #2d2d30;
-
-  /* Spacing - 8px Base Grid */
-  --space-xs: 0.25rem; /* 4px */
-  --space-sm: 0.5rem;  /* 8px */
-  --space-md: 1rem;    /* 16px */
-  --space-lg: 1.5rem;  /* 24px */
-  --space-xl: 2rem;    /* 32px */
-
-  /* Border Radii - Minimal/Sharp */
-  --radius-sm: 1px;
-  --radius-md: 2px;
-  --radius-lg: 4px;
-
-  /* Transitions */
-  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --radius-md: 4px;
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
   body {
-    @apply bg-carbon text-stark-white font-sans antialiased;
+    background-color: var(--color-obsidian);
+    color: var(--color-muted-silver);
+    font-family: var(--font-display);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    text-transform: uppercase;
+    letter-spacing: -0.05em;
+    font-weight: 800;
+  }
+
+  code, pre, .technical-label {
+    font-family: var(--font-mono);
   }
 }
 
 @layer components {
-  /* Industrial-grade containers */
-  .corral-container {
-    @apply border border-steel bg-graphite/50 p-6 rounded-md;
-    box-shadow: 0 4px 24px -12px rgba(0, 0, 0, 0.7);
+  /* Industrial Card Utility */
+  .corral-card {
+    background-color: var(--color-slate-dark);
+    border: 1px solid var(--color-slate-gray);
+    padding: 1.5rem;
+    transition: all 0.2s ease-in-out;
   }
 
-  .burro-card {
-    @apply border border-steel bg-graphite p-6 rounded-sm transition-all duration-150 hover:border-stark-white/30;
+  .corral-card:hover {
+    border-color: var(--color-electric-blue);
+    box-shadow: var(--shadow-glow-blue);
   }
 
+  /* Machined Button */
+  .btn-precision {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.875rem;
+    background-color: var(--color-electric-blue);
+    color: white;
+    border: none;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%);
+    transition: filter 0.2s;
+  }
+
+  .btn-precision:hover {
+    filter: brightness(1.1);
+    cursor: pointer;
+  }
+
+  /* Blueprint Node */
   .blueprint-node {
-    @apply font-mono text-sm bg-steel/20 p-3 border-l-2 border-stark-white;
+    border: 1px solid var(--color-slate-gray);
+    background: var(--color-obsidian);
+    width: 12px;
+    height: 12px;
+    position: relative;
   }
 
-  /* Technical signals */
-  .active-pulse {
-    @apply relative;
-  }
-  .active-pulse::after {
-    content: '';
-    @apply absolute -left-1 -top-1 w-2 h-2 bg-terminal-green rounded-full;
-    box-shadow: 0 0 8px #10B981;
+  .blueprint-node.active {
+    background: var(--color-electric-blue);
+    box-shadow: 0 0 8px var(--color-electric-blue);
   }
 
-  /* Industrial buttons */
-  .btn-primary {
-    @apply inline-flex items-center justify-center rounded-sm bg-stark-white px-8 py-3 text-sm font-bold uppercase tracking-widest text-carbon transition-all hover:bg-white active:scale-95;
+  /* Section Dividers */
+  .industrial-divider {
+    height: 1px;
+    background: linear-gradient(90deg, var(--color-slate-gray) 0%, transparent 100%);
+    width: 100%;
+    margin: 2rem 0;
   }
+}
 
-  .btn-secondary {
-    @apply inline-flex items-center justify-center rounded-sm border border-steel bg-transparent px-8 py-3 text-sm font-bold uppercase tracking-widest text-stark-white transition-all hover:bg-steel/30;
-  }
-  
-  .section-container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
-  }
-  
-  /* Technical Log Style */
-  .activity-log {
-    @apply font-mono text-xs text-muted-foreground bg-black/40 p-4 border-t border-steel;
-    line-height: 1.6;
-  }
-
-  .panel {
-    @apply bg-graphite border border-steel rounded-sm;
-  }
+/* Custom Utilities */
+.tracking-blueprint {
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: var(--color-zinc-dimmed);
 }
