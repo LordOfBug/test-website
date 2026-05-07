@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
-import { CorralCard } from '@/components/CorralCard';
+import CorralCard from '@/components/CorralCard';
 import { LayoutGrid, Users, Zap, Shield, Workflow, Terminal, Cpu, Code, Search } from 'lucide-react';
 
 const BlueprintVisualizer = dynamic(() => import('@/components/BlueprintVisualizer').then(m => m.BlueprintVisualizer), { ssr: false });
@@ -58,19 +58,22 @@ export default function LandingPage() {
           
           <div className="grid md:grid-cols-3 gap-8">
             <CorralCard 
-              icon={Cpu}
-              title="Architect Burro"
-              description="Structural design and system orchestration. Manages high-level blueprint decomposition."
+              id="ARCH-01"
+              status="OK"
+              burros={[{ name: 'Architect', status: 'Idle', progress: 0 }]}
+              updates={['Blueprint ready']}
             />
             <CorralCard 
-              icon={Code}
-              title="Developer Burro"
-              description="Autonomous implementation and code review. Optimized for low-latency technical execution."
+              id="DEV-09"
+              status="OK"
+              burros={[{ name: 'Developer', status: 'Idle', progress: 0 }]}
+              updates={['IDE connected']}
             />
             <CorralCard 
-              icon={Search}
-              title="Researcher Burro"
-              description="Deep context retrieval and validation. Ensures every action is backed by verified data."
+              id="RES-02"
+              status="OK"
+              burros={[{ name: 'Researcher', status: 'Idle', progress: 0 }]}
+              updates={['Web search active']}
             />
           </div>
         </div>
