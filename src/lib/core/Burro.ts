@@ -1,4 +1,4 @@
-import { IBlackboard, EphemeralBlackboard } from './Blackboard';
+import { IBlackboard, EphemeralBlackboard } from '../blackboard/Blackboard';
 
 export interface BurroMetadata {
   id: string;

@@ -1,5 +1,6 @@
 import { Burro } from '../core/Burro';
 import { IBlackboard } from '../blackboard/Blackboard';
+import { GraphEngine, Blueprint as GraphBlueprint } from './GraphEngine';
 
 export interface BlueprintStep {
   id: string;
@@ -24,21 +25,17 @@ export class SequentialEngine {
   }
 
   async execute(blueprint: Blueprint): Promise<void> {
-    console.log(`[Engine] Starting execution of blueprint: ${blueprint.name}`);
-    
-    for (const step of blueprint.steps) {
-      const burro = this.burros.find(b => b.role === step.burroRole);
-      
-      if (!burro) {
-        throw new Error(`No burro found with role: ${step.burroRole}`);
-      }
+    console.log(`[Engine] Legacy SequentialEngine used. Converting to GraphEngine...`);
+    const graphBlueprint: GraphBlueprint = {
+      id: blueprint.id,
+      name: blueprint.name,
+      nodes: blueprint.steps.map((step, index) => ({
+        ...step,
+        dependsOn: index > 0 ? [blueprint.steps[index - 1].id] : []
+      }))
+    };
 
-      console.log(`[Engine] Executing step ${step.id} using ${burro.name}`);
-      await burro.performTask(step.taskName, step.params);
-      
-      await this.blackboard.set('current_step', step.id);
-    }
-
-    console.log(`[Engine] Blueprint ${blueprint.name} completed successfully.`);
+    const engine = new GraphEngine(this.burros, this.blackboard);
+    return engine.execute(graphBlueprint);
   }
 }

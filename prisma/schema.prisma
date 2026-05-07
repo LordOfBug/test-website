@@ -1,0 +1,71 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Corral {
+  id         String     @id @default(uuid())
+  name       String
+  createdAt  DateTime   @default(now())
+  metadata   Json?
+  tasks      Task[]
+}
+
+model Blueprint {
+  id          String   @id @default(uuid())
+  name        String
+  definition  Json     // DAG structure
+  version     Int      @default(1)
+  tasks       Task[]
+}
+
+model Task {
+  id           String     @id @default(uuid())
+  blueprintId  String
+  corralId     String
+  status       String     // PENDING, IN_PROGRESS, SUCCESS, FAILED
+  startedAt    DateTime   @default(now())
+  completedAt  DateTime?
+  
+  blueprint    Blueprint  @relation(fields: [blueprintId], references: [id])
+  corral       Corral     @relation(fields: [corralId], references: [id])
+  nodes        TaskNode[]
+  auditLogs    AuditLog[]
+}
+
+model TaskNode {
+  id              String    @id @default(uuid())
+  taskId          String
+  blueprintNodeId String
+  burroId         String
+  status          String    // PENDING, IN_PROGRESS, SUCCESS, FAILED
+  input           Json?
+  output          Json?
+  startedAt       DateTime  @default(now())
+  completedAt     DateTime?
+  
+  task            Task      @relation(fields: [taskId], references: [id])
+}
+
+model AuditLog {
+  id        String   @id @default(uuid())
+  taskId    String?
+  burroId   String?
+  action    String
+  payload   Json?
+  timestamp DateTime @default(now())
+  
+  task      Task?    @relation(fields: [taskId], references: [id])
+}
+
+model BlackboardState {
+  key       String   @id
+  value     Json
+  updatedAt DateTime @updatedAt
+}
